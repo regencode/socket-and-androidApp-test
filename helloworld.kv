@@ -1,0 +1,27 @@
+#:kivy 1.9.0
+<MyRoot>:
+
+    numberDisplay : numberDisplay
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "Say hello!"
+            font_size: 50
+            color: 0.76, 0.87, 0.54, 1
+        Label:
+            id: numberDisplay
+            text: "0"
+            font_size: 64
+        Button:
+            text: "Increase by 10"
+            font_size: 32
+            size: 100, 30
+            on_press: root.count()
+        
+        Button:
+            text: "Send current number to server"
+            font_size: 32
+            size: 100, 30
+            on_press: root.sendToServer()
